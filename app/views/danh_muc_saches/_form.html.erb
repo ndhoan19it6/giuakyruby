@@ -1,0 +1,17 @@
+<%= form_with(model: danh_muc_sach) do |form| %>
+  <% if danh_muc_sach.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(danh_muc_sach.errors.count, "error") %> prohibited this danh_muc_sach from being saved:</h2>
+
+      <ul>
+        <% danh_muc_sach.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+<%= form_with(model: nha_xuat_ban) do |form| %>
+  <% if nha_xuat_ban.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(nha_xuat_ban.errors.count, "error") %> prohibited this nha_xuat_ban from being saved:</h2>
+
+      <ul>
+        <% nha_xuat_ban.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
